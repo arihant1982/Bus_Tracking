@@ -36,7 +36,7 @@ if st.button("📍 Mostrar mapa") or actualizar:
                 delay = props.get("delay", 0)
                 folium.Marker(
                     location=[lat, lon],
-                    popup=f"🚌 Línea {props['line']}<br>ID: {props['id']}<br>Delay: {delay}s",
+                    popup=f"🚌 Línea {props['line']}<br>ID: {props['linienid']}<br>Delay: {delay}s",
                     tooltip="Click para detalles"
                 ).add_to(mapa)
             marcador_estado.success(f"{len(buses)} vehículos encontrados.")
