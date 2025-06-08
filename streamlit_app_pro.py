@@ -12,7 +12,7 @@ def obtener_buses_por_ruta(ruta_objetivo):
     datos = response.json()
     return [
         bus for bus in datos["features"]
-        if bus["properties"].get("line") == ruta_objetivo
+        if bus["properties"].get("linienid") == ruta_objetivo
     ]
 
 st.set_page_config(page_title="🚍 Bus Tracker PRO", layout="wide")
